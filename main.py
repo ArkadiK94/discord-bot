@@ -38,7 +38,7 @@ async def on_ready():
                       last_message.created_at.strftime("%d/%m "))
         except Exception as ex:
             print(f'problem with {channel.name}, ex: {ex}')
-
+    exit(0)
 
 if __name__ == '__main__':
     bot.run(TOKEN)
