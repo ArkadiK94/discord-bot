@@ -1,6 +1,6 @@
 # What is this bot
  Bot to find unused Discord channels and send them messages to check if they are still in use 
-
+built in general to help maakaf project https://maakaf-landing-page.netlify.app/
 # How to install and run 
 
  `python3 -m pip install -r requirements.txt`
