@@ -24,7 +24,7 @@ async def on_ready():
     print(f'Logged in as {bot.user.name}, go to send message {SEND_MESSAGE}')
     server = bot.guilds[0]
     channels = [channel for channel in server.text_channels if
-                'rojects' in channel.category.name and channel.name not in EXCLUDE_CHANNELS]
+                'rojects' in channel.category.name and 'projects-archive' != channel.category.name and channel.name not in EXCLUDE_CHANNELS]
     print(f'channels we going to test\n {[channel.name for channel in channels]}\n\n')
     for channel in channels:
         try:
@@ -39,6 +39,7 @@ async def on_ready():
         except Exception as ex:
             print(f'problem with {channel.name}, ex: {ex}')
     exit(0)
+
 
 if __name__ == '__main__':
     bot.run(TOKEN)
